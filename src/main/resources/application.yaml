@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: development
+  main:
+    banner-mode: off
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/example_auth?currentSchema=example_auth
+    username: postgres
+    password: password
+  config:
+    import:
+      - secrets.yaml
+logging:
+  level:
+    root: info
+server:
+  port: 8080
